@@ -1,0 +1,13 @@
+<h1>Welcome to JRuby on Rails 7.1 Starter App</h1>
+
+<ul>
+  <li><strong>Ruby/JRuby:</strong> <%= @ruby_version %></li>
+  <% if @jruby_version %>
+    <li><strong>JRuby Version:</strong> <%= @jruby_version %></li>
+  <% end %>
+  <li><strong>Rails Version:</strong> <%= @rails_version %></li>
+  <% if @java_version %>
+    <li><strong>Java Version:</strong> <%= @java_version %></li>
+  <% end %>
+  <li><strong>Environment:</strong> <%= @environment %></li>
+</ul>
