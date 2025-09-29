@@ -1,24 +1,62 @@
-# README
+# JRuby Rails 7.1 Starter App (No DB)  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a minimal Rails 7.1 application running on **JRuby 9.4.5.0** without a database.  
+It displays basic system information at the root route (`/`) and is ready to be packaged as a **WAR file** for deployment on WebLogic.  
 
-Things you may want to cover:
+---
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+- **Java 8** (JDK 1.8)
+- **JRuby 9.4.5.0**
+- **Bundler** (tested with 2.6.x)
+- **Rails 7.1.x**
+- **Warbler** gem
 
-* Configuration
+---
 
-* Database creation
+## Setup Instructions
 
-* Database initialization
+1. **Clone the repository**
+```bash
+git clone git@github.com:qisantanu/myapp_for_weblogic.git
+cd myapp_for_weblogic
+```
 
-* How to run the test suite
+2. Use JRuby
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+rvm use jruby-9.4.5.0
+# or using rbenv
+rbenv local jruby-9.4.5.0
+```
 
-* Deployment instructions
+3. Install dependencies
 
-* ...
+```bash
+bundle install
+```
+
+4. Run the Rails server
+
+```bash
+bin/rails server
+```
+
+Visit http://localhost:3000
+ to see:
+
+Ruby/JRuby version
+Rails version
+Java version
+Environment
+
+
+5. Build the WAR file
+
+`bundle exec warble war`
+
+
+
+The WAR file your_app_name.war will be generated in the root directory.
+Deploy this WAR to __WebLogic__.
