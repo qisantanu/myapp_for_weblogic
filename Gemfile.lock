@@ -1,12 +1,14 @@
 GIT
-  remote: https://github.com/qinvent/warbler.git
-  revision: c0953a127c0b9c516cee4889517c194125489de9
+  remote: https://github.com/jruby/warbler.git
+  revision: 523237b6d931efcd6f13a79692f6aa46ad997443
   specs:
     warbler (2.0.5)
       jruby-jars (>= 9.0.0)
       jruby-rack (>= 1.1.1, < 1.3)
+      ostruct (= 0.6.2)
       rake (>= 13.0.3)
-      rubyzip (>= 1.0.0)
+      rexml (~> 3.0)
+      rubyzip (>= 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -164,6 +166,7 @@ GEM
     nio4r (2.5.8-java)
     nokogiri (1.18.10-java)
       racc (~> 1.4)
+    ostruct (0.6.2)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)

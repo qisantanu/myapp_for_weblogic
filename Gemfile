@@ -70,7 +70,7 @@ gem 'nio4r', '2.5.8'
 gem 'bouncy-castle-java', '~> 1.5', '>= 1.5.0147'
 
 platforms :jruby do
-  gem 'warbler', git: 'https://github.com/qinvent/warbler.git'
+  gem 'warbler', git: 'https://github.com/jruby/warbler.git'
 end
 
 gem 'rubyzip', '3.0.0'
