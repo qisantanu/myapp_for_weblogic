@@ -54,7 +54,7 @@ Environment
 
 5. Build the WAR file
 
-`RAILS_ENV=production rails assets:precompile`
+`RAILS_ENV=production bundle exec rake assets:clobber assets:precompile`
 
 `bundle exec warble war`
 

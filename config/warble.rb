@@ -1,6 +1,11 @@
 # Disable Rake-environment-task framework detection by uncommenting/setting to false
 # Warbler.framework_detection = false
 
+if (latest_manifests = FileList["public/**/.sprockets-manifest-*.json"]).length
+  sprocket_file = latest_manifests[0]
+  FileUtils.cp(sprocket_file, sprocket_file.sub('.sprockets-', ''))
+end
+
 # Warbler web application assembly configuration file
 Warbler::Config.new do |config|
   # Features: additional options controlling how the jar is built.
@@ -17,6 +22,7 @@ Warbler::Config.new do |config|
 
   # Additional files/directories to include, above those in config.dirs
   # config.includes = FileList["db"]
+    config.includes = FileList['lib/**/*', 'Rakefile', 'public/**/*']
 
   # Additional files/directories to exclude
   # config.excludes = FileList["lib/tasks/*"]
@@ -80,13 +86,15 @@ Warbler::Config.new do |config|
 
   # Name of the archive (without the extension). Defaults to the basename
   # of the project directory.
-  config.jar_name = "myapp_for_weblogica"
+  config.jar_name = "myapp_for_weblogic"
 
   # File extension for the archive. Defaults to either 'jar' or 'war'.
   # config.jar_extension = "jar"
 
   # Destionation for the created archive. Defaults to project's root directory.
   # config.autodeploy_dir = "dist/"
+  config.autodeploy_dir = ENV["ARTIFACT_TARGET_DIR"] || "./"
+
 
   # Name of the MANIFEST.MF template for the war file. Defaults to a simple
   # MANIFEST.MF that contains the version of Warbler used to create the war file.

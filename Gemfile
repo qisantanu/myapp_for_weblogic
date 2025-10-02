@@ -9,6 +9,7 @@ gem 'jruby-jars', '9.4.5.0' # JRuby runtime
 gem 'jruby-openssl', '0.10.5' # OpenSSL for
 gem 'jruby-rack', '1.2.5' # Rack for JRuby
 gem 'jar-dependencies', '0.4.1'
+gem 'rack', '2.2.17'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -42,7 +43,7 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+# gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -70,7 +71,7 @@ gem 'nio4r', '2.5.8'
 gem 'bouncy-castle-java', '~> 1.5', '>= 1.5.0147'
 
 platforms :jruby do
-  gem 'warbler', git: 'https://github.com/jruby/warbler.git'
+  gem "warbler", git: 'https://github.com/jruby/warbler.git'
 end
 
 gem 'rubyzip', '3.0.0'
