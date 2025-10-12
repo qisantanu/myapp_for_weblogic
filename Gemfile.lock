@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jruby/warbler.git
-  revision: 523237b6d931efcd6f13a79692f6aa46ad997443
+  revision: 9a6e555f4ca38c609badd973659e50ce48205a84
   specs:
     warbler (2.0.5)
       jruby-jars (>= 9.0.0)
